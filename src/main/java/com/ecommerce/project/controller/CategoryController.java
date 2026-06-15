@@ -17,10 +17,6 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    public CategoryController(CategoryService categoryService) {
-        this.categoryService = categoryService;
-    }
-
     @GetMapping("/echo")
     public ResponseEntity<String> echoMessage(@RequestParam(name = "message", required = false) String message){
         //public ResponseEntity<String> echoMessage(@RequestParam(name = "message", defaultValue = "Hello World!") String message){
